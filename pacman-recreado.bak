@@ -1,0 +1,39 @@
+#lang racket
+(require 2htdp/universe)       
+(require 2htdp/image)
+
+;; A simple pac-man game
+
+;; Constants:
+
+(define SCREEN-W 800)
+(define SCREEN-H 880)
+(define TOCK 0.2)
+
+(define E "empty") 
+(define D "dot")   
+(define W "wall") 
+(define C "cherry")
+
+
+(define INIT-BOARD
+  (vector (vector W W W W W W W W W W W W W W W W W W W)
+          (vector W D D D D D D D D W D D D D D D D D W)
+          (vector W D W W D W W W D W D W W W D W W D W)
+          (vector W D D D D D D D D D D D D D D D D D W)
+          (vector W D W W D W D D W W W D D W D W W D W)
+          (vector W D D D D W W D D W D D W W D D D D W)
+          (vector W W W W D W D D D D D D D W D W W W W)
+          (vector E E E W D W D W W E W W D W D W E E E)
+          (vector W W W W D W D W E E E W D W D W W W W)
+          (vector D D D D D D D W W W W W D D D D D D D)
+          (vector W W W W D W D D D D D D D W D W W W W)
+          (vector E E E W D W D W W W W W D W D W E E E)
+          (vector W W W W D D D D D W D D D D D W W W W)
+          (vector W D D D D W W W D D D W W W D D D D W)
+          (vector W D W W D D D D D W D D D D D W W D W)
+          (vector W D D W D W D W W W W W D W D W D D W)
+          (vector W W D D D W D D W W W D D W D D D W W)
+          (vector W D D W W W W D D W D D W W W W D D W)
+          (vector W D D D D D D D D D D D D D D D D D W)
+          (vector W W W W W W W W W W W W W W W W W W W)))

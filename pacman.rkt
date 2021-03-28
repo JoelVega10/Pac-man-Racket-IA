@@ -109,6 +109,12 @@
 ;; - "L"
 ;; - "R"
 ;; interp. direction that a sprite is facing
+(define (outputListData list)
+  (cond 
+    [(null? list) #f]             ; actually doesn't really matter what we return
+    [else (printf "~s\n" (first list))    ; display the first item ...
+          (outputListData (rest list))])) ; and start over with the rest
+
 
 (define-struct pos (x y))
 ;; Pos is (make-pos Natural Natural)
